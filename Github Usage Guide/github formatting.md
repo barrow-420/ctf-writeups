@@ -43,3 +43,4 @@ This is html
 ~~Strip~~
 
 This would be enough to start my formmating and syntax.
+theme: jekyll-theme-hacker
