@@ -1,15 +1,21 @@
-## Welcome to GitHub Pages
+## Let's Go
 
-You can use the [editor on GitHub](https://github.com/barrow-420/barrow-420/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+This repo was made so that I can share my write-ups for security Capture The Flags, wargames, or similar exercises.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Also, I will be uploading various technology related topics that I am interested in. 
 
-### Markdown
+This kind of my personal diary, using this repo I make recordings of myself and improve my write-ups skills.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you are the owner of a CTF/wargame and would like me to remove a write-up, please create an issue and I will do so.
 
-```markdown
-Syntax highlighted code block
+
+### Resources
+
+Useful sites and informations
+[HackTheBox](hackthebox.eu)
+[TryHackMe](tryhackme.com/)
+[VulnHub](https://www.vulnhub.com/)
+[CTFtime](ctftime.org)
 
 # Header 1
 ## Header 2
