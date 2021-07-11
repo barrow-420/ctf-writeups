@@ -37,3 +37,7 @@ horizontal split ```-```
 ```tmux new -s <name>``` to create session with custom name from the first time.
 
 ```tmux kill-session -t <name>``` to kill the session.
+
+```hold prefix + arrow``` to resize the pane.
+
+```prefix + [``` to go copy mode. type q to quit out of it. 
