@@ -34,3 +34,34 @@ According to the last line of code from the picture above, I typed ```cat .flag`
 
 However, once I typed ```hint```, I found out this has something to do with "Konami"
 
+## Task 3
+
+This is where I got caught for a long time.
+
+I have never heard about Konami before, so I spent lots of time researching about it. 
+
+I am kind of a guy, who pursue for understanding of the topic so I tried my best to understand as deep as possible.
+
+![5](https://user-images.githubusercontent.com/76433661/127763255-f5624413-f5a6-4fee-b2e6-f95a9544230a.png)
+
+this is called the Konami Code and you can read more about it from [here](https://en.wikipedia.org/wiki/Konami_Code)
+
+![6](https://user-images.githubusercontent.com/76433661/127763299-cf799004-b4e1-49bd-9e88-2cf9d59e7158.png)
+
+I typed the Konami code and I my privilege got upgraded to root user. 
+
+I typed the Konami code several more times and this is what I got.
+
+![7](https://user-images.githubusercontent.com/76433661/127763340-95d8aa91-b02a-4ed8-980e-691ff85278bd.png)
+
+```emxpYi5kZWNvbXByZXNzKCd4nLPTpgrQsyFdi50uBtDDpg63ndiMwAVwGoPFYEzNNrp6dpjOwVQIVU6WC3CZBtcPAIrcScYnKQ==```
+
+## Task 4
+After seeing this string, I instantly guessed this has something to do with decoding and I easily decoded it using [base64 decoder](https://www.base64decode.org/)
+
+After decoding it, I got result of...
+
+```zlib.decompress('x\x9c\xb3\xd3\xa6\n\xd0\xb3!]\x8b\x9d.\x06\xd0\xc3\xa6\x0e\xb7\x9d\xd8\x8c\xc0\x05p\x1a\x83\xc5`L\xcd6\xbazv\x98\xce\xc1T\x08UN\x96\x0bp\x99\x06\xd7\x0f\x00\x8a\xdcI\xc6')```
+
+## Task 5
+
