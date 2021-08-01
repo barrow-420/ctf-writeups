@@ -4,7 +4,7 @@
 As a freshman of JI, Joint institute at SJTU.
 I got curious whether SJTU has a CTF team. 
 
-I did some googling and soone found out this interesting looking [website](https://0ops.sjtu.cn/)
+I did some googling and soon found out this interesting looking [website](https://0ops.sjtu.cn/)
 
 I instantly dived in and started to solve the puzzle.
 
