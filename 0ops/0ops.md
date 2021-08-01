@@ -18,13 +18,13 @@ However, it seemed like commands are restricted.
 
 ![2](https://user-images.githubusercontent.com/76433661/127763026-b222d887-ac5d-4830-af61-ac9ac3d5e6e6.png)
 
-I did ```ls``` and read through all the txt files. From the contact.txt file, I found out there is a flag hiddne inside this website.
+I typed ```ls``` and read through all the txt files. From the ```contact.txt``` file, I found out there is a flag hidden inside this website.
 
 ## Task 2
 
-Although I am a very beginner at this, I had a strong feeling that I won't need strong enumeration like nmap or dirbuster for this game so I just divded right into the source code.
+Although I am a very beginner at this, I had a strong feeling that I won't need strong enumeration such as nmap or dirbuster for this game so I just divded right into the source code.
 
-As I read through the source code, I found interesting looking code containing keyword ```flag```.
+As I read through the source code, I found interesting looking code containing the keyword:  ```flag```.
 
 ![3](https://user-images.githubusercontent.com/76433661/127763130-6a876030-8ea4-4ce1-8616-1e98d84f30c6.png)
 
@@ -36,11 +36,11 @@ However, once I typed ```hint```, I found out this has something to do with "Kon
 
 ## Task 3
 
-This is where I got caught for a long time.
+This is where I got stuck for a long time.
 
 I have never heard about Konami before, so I spent lots of time researching about it. 
 
-I am kind of a guy, who pursue for understanding of the topic so I tried my best to understand as deep as possible.
+I am kind of a guy, who pursue full understanding of the topic so I tried my best to understand as thoroughly as possible.
 
 ![5](https://user-images.githubusercontent.com/76433661/127763255-f5624413-f5a6-4fee-b2e6-f95a9544230a.png)
 
@@ -48,7 +48,7 @@ this is called the Konami Code and you can read more about it from [here](https:
 
 ![6](https://user-images.githubusercontent.com/76433661/127763299-cf799004-b4e1-49bd-9e88-2cf9d59e7158.png)
 
-I typed the Konami code and I my privilege got upgraded to root user. 
+I typed the Konami code and I my privilege got upgraded to the root user. 
 
 I typed the Konami code several more times and this is what I got.
 
@@ -57,7 +57,7 @@ I typed the Konami code several more times and this is what I got.
 ```emxpYi5kZWNvbXByZXNzKCd4nLPTpgrQsyFdi50uBtDDpg63ndiMwAVwGoPFYEzNNrp6dpjOwVQIVU6WC3CZBtcPAIrcScYnKQ==```
 
 ## Task 4
-After seeing this string, I instantly guessed this has something to do with decoding and I easily decoded it using [base64 decoder](https://www.base64decode.org/)
+After seeing this string, I instantly guessed this has something to do with decoding, and I easily decoded it using [base64 decoder](https://www.base64decode.org/)
 
 After decoding it, I got result of...
 
