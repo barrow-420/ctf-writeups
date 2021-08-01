@@ -1,7 +1,7 @@
 # 0ops!
 ## Short Story
 
-As a freshman for JI, Joint institute at SJTU.
+As a freshman of JI, Joint institute at SJTU.
 I got curious whether SJTU has a CTF team. 
 
 I did some googling and soone found out this interesting looking [website](https://0ops.sjtu.cn/)
