@@ -47,6 +47,18 @@ This thing, goes along with NFS.
 
 ```nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.69.224```
 
+
+
+#### NFS
+
+Network File System (NFS) allows a user on a client computer to access files on a remote computer, like accessing a local storage. It uses Remote Procedure Calls (RPC) to route requests between client and server.
+
+#### Portmapper
+
+The RPC Portmapper (also called portmap or rpcbind) is a service which makes sure that the client ends up at the right port, which means that it maps the client RPC requests to the correct services. It keeps track of what services are running on which ports. E.g. a client contacts portmap on the server machine to determine the port number where the RPC requests should be send to. The Portmapper listens on a static port 111, on which an inital connection is made.
+
+[source](https://medium.com/@sebnemK/how-to-bypass-filtered-portmapper-port-111-27cee52416bc)
+
 ## Task 3
 
 ```netcat 10.10.69.224 21```
