@@ -57,6 +57,10 @@ Network File System (NFS) allows a user on a client computer to access files on 
 
 The RPC Portmapper (also called portmap or rpcbind) is a service which makes sure that the client ends up at the right port, which means that it maps the client RPC requests to the correct services. It keeps track of what services are running on which ports. E.g. a client contacts portmap on the server machine to determine the port number where the RPC requests should be send to. The Portmapper listens on a static port 111, on which an inital connection is made.
 
+the rpcinfo -p <Target IP> can be helfpul for determining if the portmapper services are available from outside. 
+
+```nmap -sV -script=nfs* <IP Remote Server>```    
+    
 [source](https://medium.com/@sebnemK/how-to-bypass-filtered-portmapper-port-111-27cee52416bc)
 
 ## Task 3
