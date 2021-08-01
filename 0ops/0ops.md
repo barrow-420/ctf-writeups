@@ -64,4 +64,29 @@ After decoding it, I got result of...
 ```zlib.decompress('x\x9c\xb3\xd3\xa6\n\xd0\xb3!]\x8b\x9d.\x06\xd0\xc3\xa6\x0e\xb7\x9d\xd8\x8c\xc0\x05p\x1a\x83\xc5`L\xcd6\xbazv\x98\xce\xc1T\x08UN\x96\x0bp\x99\x06\xd7\x0f\x00\x8a\xdcI\xc6')```
 
 ## Task 5
+I have learned bit of python and Javascript, so I can roughly read the code, but I am really bad a programming, so I had to research a lot to understand how ```zlib.decompress``` works.
 
+[This website](https://stackoverflow.com/questions/28641731/decode-gzip-compressed-and-base64-encoded-data-to-a-readable-format) helped me a lot when studying.
+
+![8](https://user-images.githubusercontent.com/76433661/127763949-c7f20a37-7f7e-42d8-be0b-eba26b25c541.png)
+
+I used Ubuntu and used terminal python3 to decompress.
+
+When I decompressed it, I got this weird looking string.
+
+```>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.<+++++++++++++++++++++++++++++++++++++++++++++++++.>------------------.+++++++++++++++++++.++++++++++++++++++++++++.<.>------------------------------------------.++++++++++++++++++++++++++++++++++++++++++.-----------------.<-.>++++++.+++++++++++.-----------------------.---------------------.+++++++++++++++++++++++++++++++.-------------------------------.```
+
+## Task 6
+After doing some googling, I found out this kind of string is called ```Brainfuck```
+
+I simply used this [website](https://www.dcode.fr/brainfuck-language) to decode the brainfuck and got the flag
+
+Find out the falg by your self. 
+
+This was a interesting CTF and I was happy to find out that university that I would be attending has a CTF playing team.
+
+I wish I can join the team later when I get to Shanghai.
+
+: )
+
+*** I will remove the the md file if there is any problem related to spoiler ***
