@@ -30,3 +30,26 @@
 ```connect```
 Example: ```connect -z google.com 80```
 
+### Change the Value of Variable
+
+```set, setg```
+
+
+### View the Variable
+
+```get```
+
+### Change the value of variable to Null
+
+```unset```
+
+### Saving to Grepable file
+
+```spool```
+
+Example: ```spool Downloads/console.log```
+
+### Save Set value to databse for later use
+
+```save```
+
