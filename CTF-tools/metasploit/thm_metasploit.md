@@ -53,3 +53,8 @@ Example: ```spool Downloads/console.log```
 
 ```save```
 
+![image](https://user-images.githubusercontent.com/76433661/127847644-4f8011f7-0306-4c17-9ce7-b855b3d1759d.png)
+
+### Load Different Modules
+
+```load```
