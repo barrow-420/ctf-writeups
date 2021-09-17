@@ -42,3 +42,8 @@ install [impacket](https://github.com/SecureAuthCorp/impacket#installing)
 Using the .py file carry on the enumeration.
 
 - impacket [rpcdump.py](https://0xffsec.com/handbook/services/msrpc/#fn:3)
+
+## Colling down
+
+## Task 3 : studying port 1433
+
