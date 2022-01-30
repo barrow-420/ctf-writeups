@@ -71,3 +71,6 @@ Burp will intercept and now change the `payload.php.jpg` into `payload.php`.
   set ...
   run
   ``
+
+  
+  `find / -perm -u=s -type f 2>/dev/null`
