@@ -74,3 +74,5 @@ Burp will intercept and now change the `payload.php.jpg` into `payload.php`.
 
   
   `find / -perm -u=s -type f 2>/dev/null`
+  
+  `python -c 'import pty; pty.spawn("/bin/sh")'`
