@@ -1,7 +1,7 @@
-# Vulnhub Simple
+# Vulnhub Simple Walkthrough
 
 ## Enumeration
-`nmap -sC -sV -Pn <ip>`
+`nmap -vvv -sC -sV -Pn <ip> -oA simple`
 
 Sc : default scripts
 
