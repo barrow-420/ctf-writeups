@@ -101,6 +101,8 @@ PHP code upload bypass methods ex) magic number, encoding, etc
 
 What enumerations should I be doing at low-user status
 
+nikto
+
 Privilege Escalation ex) kernel exploitation, sudo , suid, etc
 
 ## Thoughts
