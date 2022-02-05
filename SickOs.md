@@ -59,3 +59,13 @@ Now that I am inside the system, only thing I need to do is to upload arbitrary 
 I used [pentestmonkey php revershell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) to upload my code on the system.
 
 And my Kali machine was waiting to capture the signal with the command `nc -lvp 1234`
+
+After that, I went to PHP file link through browser using the following link `http://172.16.126.135/wolfcms/public/shell.php`.
+
+Now I checked my kali terminal, and I had a shell popped open. 
+
+![shell](https://user-images.githubusercontent.com/76433661/152643328-bd97c07c-0dfb-4923-b709-9a4e67290be9.png)
+
+
+
+
