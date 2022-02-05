@@ -94,3 +94,24 @@ Moved my working directory to `/root` and found the flag.
 
 ![end](https://user-images.githubusercontent.com/76433661/152644896-43482539-fcda-4920-b988-48db3dac8ea8.png)
 
+## Further studies to be done
+hydra bruteforce *how to hydra through proxy*
+
+PHP code upload bypass methods ex) magic number, encoding, etc
+
+What enumerations should I be doing at low-user status
+
+Privilege Escalation ex) kernel exploitation, sudo , suid, etc
+
+## Thoughts
+
+This machine was marked as Easy machine, and it was indeed easy.
+
+Although I got helped from several sources (not walkthroughs), it tooks me less then 4 hours to finish the machine. 
+
+This is a well made boot2root box.
+
+Rating 8/10
+
+##### Notice
+If any part of my writeup needs to be deleted or violates something, make a commit and I will make changes.
