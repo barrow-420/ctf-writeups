@@ -1,14 +1,12 @@
 # Vulnhub SickOS 
 
-## Enumeration
+**My SetUp**
+- VMware Workstation Pro
+- Kali: 172.16.126.129
+- SickOS: 172.16.126.135
+(I used NAT for both Machines)
 
-Kali: 172.16.126.129
-
-SickOS: 172.16.126.135
-
-I used NAT for both Machines. 
-
-nmap
+## Nmap
 
 `sudo nmap -vvv -sC -sV 172.16.126.135 -oA sickos`
 
