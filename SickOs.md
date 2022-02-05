@@ -54,6 +54,8 @@ Even before trying bruteforcing, I tired `admin;admin` and it worked right away.
 
 ![main](https://user-images.githubusercontent.com/76433661/152643172-f65d45f7-c63a-46cf-bcfc-4012c788c053.png)
 
+## Exploitation
+
 Now that I am inside the system, only thing I need to do is to upload arbitrary PHP file, and capture the reverse shell with the nc command. 
 
 I used [pentestmonkey php revershell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) to upload my code on the system.
@@ -66,6 +68,8 @@ Now I checked my kali terminal, and I had a shell popped open.
 
 ![shell](https://user-images.githubusercontent.com/76433661/152643328-bd97c07c-0dfb-4923-b709-9a4e67290be9.png)
 
+## Privilege Escalation
 
+Now that I have a working shell, I need to gain root access. 
 
 
