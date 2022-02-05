@@ -16,15 +16,15 @@
 
 Port 22, 3128, and 8080 seemed to be opened.
 
-SSH is usually not worth it unless SSH version is severely outdated, so I decided to move one to port 3128 right away. 
+SSH is usually not worthit unless SSH version is severely outdated, so I decided to move on to port 3128 right away. 
 
 ## Checking out Port 3128
 
-In order to see port 3128 on web browser, little change with the browser network setting has to be made. ( I used firefox)
+In order to check out port 3128 on web browser, little change with the browser network setting has to be made. (I used firefox)
 
 ![firefox_proxy_setup](https://user-images.githubusercontent.com/76433661/152642919-401787be-ea0f-4d78-be0c-928dcfb6fc74.png)
 
-Browser has to go through proxy (port 3128) in order to access the content. 
+Browser has to go through proxy (port 3128) in order to access the page. 
 
 ![blehh](https://user-images.githubusercontent.com/76433661/152642953-584290dc-cdef-4845-8b82-8d76bba55bb8.png)
 
