@@ -42,3 +42,8 @@ From the above exploit-db document, I found out there is an admin page at `172.1
 
 * pic
 
+## Exploitation
+
+Now I have to figure out way to go through the login page, in order to gain access to upload features. 
+
+I decided to use Hydra to bruteforce. 
