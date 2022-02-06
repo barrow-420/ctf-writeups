@@ -60,3 +60,26 @@ At first glance, port 80 running http seems most interesting. Robots.txt shows t
 Also, it shows that Silex v2.2.7 is used as http-generator.
 
 Searchsploit is not showing any options with silex so I moved on to googling about it and Google provided me bunch of infos. It seems liked silex v2.2.7 has a well known vuln that works together with Samba. 
+
+I read several articles about exploiting Silex v2.2.7 but it all seemed too overwhelming for me, so I decided to do more enumeration with `dirb` and `nikto`.
+
+## Dirb
+`dirb http://172.16.126.136 /usr/share/wordlists/dirb/big.txt`
+Result:
+```
+---- Scanning URL: http://172.16.126.136/ ----
+==> DIRECTORY: http://172.16.126.136/apache/                                                                                                                                                                                              
+==> DIRECTORY: http://172.16.126.136/javascript/                                                                                                                                                                                          
+==> DIRECTORY: http://172.16.126.136/old/                                                                                                                                                                                                 
+==> DIRECTORY: http://172.16.126.136/phpmyadmin/                                                                                                                                                                                          
++ http://172.16.126.136/robots.txt (CODE:200|SIZE:92)                                                                                                                                                                                     
++ http://172.16.126.136/server-status (CODE:403|SIZE:294)                                                                                                                                                                                 
+==> DIRECTORY: http://172.16.126.136/test/                                                                                                                                                                                                
+==> DIRECTORY: http://172.16.126.136/wordpress/                                                                                                                                                                                           
+==> DIRECTORY: http://172.16.126.136/wp/  
+
+---- Entering directory: http://172.16.126.136/wordpress/ ----                                                                                                                                                                             
+^[[A^[[A^[[A                                                                                                                                                                                                                               ==> DIRECTORY: http://172.16.126.136/wordpress/wp-admin/                                                                                                                                                                                  
+==> DIRECTORY: http://172.16.126.136/wordpress/wp-content/                                                                                                                                                                                
+==> DIRECTORY: http://172.16.126.136/wordpress/wp-includes/  
+```
