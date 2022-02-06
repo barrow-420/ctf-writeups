@@ -48,3 +48,9 @@ Running: Linux 3.X|4.X
 OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
 OS details: Linux 3.2 - 4.9
 ```
+Port 22, 80, 139, 445, 3306, and 6667 are open. 
+
+Nothing seems interesting from port 22 since it is running SSH and service is not very outdated. 
+I might retrieve lowerlevel-user account and try sshing using the information later. 
+
+At first glance, port 80 running http seems most interesting. Robots.txt shows that it has few disallwed enteries. 
