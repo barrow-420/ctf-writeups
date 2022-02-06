@@ -7,7 +7,7 @@ My SetUp
 
 ## Nmap
 
-`nmap -vvv -sV -sC -Pn -oA hackinos 192.168.35.226`
+`nmap -vvv -sV -sT -O -A -p- -oA hackinos 192.168.35.226`
 
 Result:
 ```
