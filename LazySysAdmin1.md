@@ -130,3 +130,4 @@ Result:
 Nikto showed nothing very special. Scan showed that there is an `/info.php` file which tells us that PHP version 5.5.9 is running.
 
 Also, later after I spawn a shell, I might get help from `/etc/php5/apache2/conf.d` to earn login information.
+3
