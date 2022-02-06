@@ -54,3 +54,9 @@ Nothing seems interesting from port 22 since it is running SSH and service is no
 I might retrieve lowerlevel-user account and try sshing using the information later. 
 
 At first glance, port 80 running http seems most interesting. Robots.txt shows that it has few disallwed enteries. 
+
+`/old/ /test/ /TR2/ /Backnode_files/`
+
+Also, it shows that Silex v2.2.7 is used as http-generator.
+
+Searchsploit is not showing any options with silex so I moved on to googling about it and Google provided me bunch of infos. It seems liked silex v2.2.7 has a well known vuln that works together with Samba. 
