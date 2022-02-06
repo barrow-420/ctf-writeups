@@ -79,7 +79,54 @@ Result:
 ==> DIRECTORY: http://172.16.126.136/wp/  
 
 ---- Entering directory: http://172.16.126.136/wordpress/ ----                                                                                                                                                                             
-^[[A^[[A^[[A                                                                                                                                                                                                                               ==> DIRECTORY: http://172.16.126.136/wordpress/wp-admin/                                                                                                                                                                                  
+==> DIRECTORY: http://172.16.126.136/wordpress/wp-admin/                                                                                                                                                                                  
 ==> DIRECTORY: http://172.16.126.136/wordpress/wp-content/                                                                                                                                                                                
 ==> DIRECTORY: http://172.16.126.136/wordpress/wp-includes/  
 ```
+From dirb there are some pages that could be potentially bruteforced. 
+- /phpmyadmin
+- /wordpress/wp-admin
+
+## Nikto
+`nikto -h http://172.16.126.136`
+Result:
+```
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          172.16.126.136
++ Target Hostname:    172.16.126.136
++ Target Port:        80
++ Start Time:         2022-02-06 03:59:47 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ OSVDB-3268: /old/: Directory indexing found.
++ Entry '/old/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ OSVDB-3268: /test/: Directory indexing found.
++ Entry '/test/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ OSVDB-3268: /Backnode_files/: Directory indexing found.
++ Entry '/Backnode_files/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ "robots.txt" contains 4 entries which should be manually viewed.
++ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Server may leak inodes via ETags, header found with file /, inode: 8ce8, size: 5560ea23d23c0, mtime: gzip
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ OSVDB-3268: /apache/: Directory indexing found.
++ OSVDB-3092: /apache/: This might be interesting...
++ OSVDB-3092: /old/: This might be interesting...
++ Retrieved x-powered-by header: PHP/5.5.9-1ubuntu4.22
++ Uncommon header 'x-ob_mode' found, with contents: 0
++ OSVDB-3092: /test/: This might be interesting...
++ /info.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /info.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ OSVDB-3233: /icons/README: Apache default file found.
++ OSVDB-5292: /info.php?file=http://cirt.net/rfiinc.txt?: RFI from RSnake's list (http://ha.ckers.org/weird/rfi-locations.dat) or from http://osvdb.org/
++ /phpmyadmin/: phpMyAdmin directory found
++ 8071 requests: 0 error(s) and 24 item(s) reported on remote host
++ End Time:           2022-02-06 04:00:39 (GMT-5) (52 seconds)
+```
+Nikto showed nothing very special. Scan showed that there is an `/info.php` file which tells us that PHP version 5.5.9 is running.
+
+Also, later after I spawn a shell, I might get help from `/etc/php5/apache2/conf.d` to earn login information.
