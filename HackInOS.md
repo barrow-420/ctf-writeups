@@ -87,5 +87,5 @@ GENERATED WORDS: 20458
 
 I though of trying bruteforce against the `wp-login` page, but in order to do that, I first need to fix the website's funky look.
 
-After researching for a while, I found out I need to set up a `invisible proxy`.
+After researching for a while, I found out I need to set up a `invisible proxy`.[reference](https://trelis24.github.io/2017/11/27/Invisible-Proxy/)
 
