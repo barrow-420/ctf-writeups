@@ -35,11 +35,21 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 SSH is usually hard to exploit unless the version is really oudated, so I moved on to Port 8000.
 
+## Traceroute
+`traceroute 192.168.35.226`
+
+Result:
+
+```
+traceroute to 192.168.35.226 (192.168.35.226), 30 hops max, 60 byte packets
+ 1  vulnvm.lan (192.168.35.226)  1.222 ms  0.977 ms  0.835 ms
+```
+
 I went to firefox to open `192.168.35.226:8000`.
 
 ![index](https://user-images.githubusercontent.com/76433661/152665945-f6f83e59-6915-4cca-a46b-1c6e48834b60.png)
 
-Page seemed to be broken, so I tried editing the /etc/hosts file to add <ip> as localhost. However, it was not working. 
+Page seemed to be broken, so I tried editing the /etc/hosts file to add <ip> as vulnvm.lan. However, page still seemes broken. 
   
 I moved on to `dirb`.
   
