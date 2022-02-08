@@ -5,7 +5,7 @@
  - I used VMware Workstation Pro NAT for both machines.
 
 ## Nmap
-`nmap -vvv -sV -sT -O -A -oA lazysysadmin 172.16.126.136'
+`nmap -vvv -sV -sT -O -A -oA lazysysadmin 172.16.126.136`
 
 Result:
 ```
