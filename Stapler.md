@@ -179,3 +179,86 @@ Ports opened were
 - 3306(MySql)
 
 I decided to enumerate samba first.
+
+## smbclient
+`smbclient -L 192.168.35.52`
+
+Result:
+```
+Enter WORKGROUP\barrow's password: 
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        kathy           Disk      Fred, What are we doing here?
+        tmp             Disk      All temporary files should be stored here
+        IPC$            IPC       IPC Service (red server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        WORKGROUP            RED
+```
+
+Seems like there are user **kathy** and **fred**.
+
+## smbclient kathy
+### Going through kathy_stuff
+`smbclient '\\192.168.35.52\kathy'
+ 
+ Result:
+ ```
+ smb: \> ls
+  .                                   D        0  Fri Jun  3 12:52:52 2016
+  ..                                  D        0  Mon Jun  6 17:39:56 2016
+  kathy_stuff                         D        0  Sun Jun  5 11:02:27 2016
+  backup                              D        0  Sun Jun  5 11:04:14 2016
+
+                19478204 blocks of size 1024. 16397120 blocks available
+smb: \> mask ""
+smb: \> recurse ON
+smb: \> prompt OFF
+smb: \> cd kathy_stuff\
+smb: \kathy_stuff\> ls
+  .                                   D        0  Sun Jun  5 11:02:27 2016
+  ..                                  D        0  Fri Jun  3 12:52:52 2016
+  todo-list.txt                       N       64  Sun Jun  5 11:02:27 2016
+
+                19478204 blocks of size 1024. 16397120 blocks available
+smb: \kathy_stuff\> lcd todo-list.txt
+chdir to todo-list.txt failed (No such file or directory)
+smb: \kathy_stuff\> mget todo-list.txt 
+getting file \kathy_stuff\todo-list.txt of size 64 as todo-list.txt (3.5 KiloBytes/sec) (average 3.5 KiloBytes/sec)
+smb: \kathy_stuff\
+```
+
+If I `cat` `todo-list.txt`, I get...
+
+`I'm making sure to backup anything important for Initech, Kathy`
+
+This means we should definitely look over `backup`.
+
+### Going through backup
+```
+smb: \> mask ""
+smb: \> recurse ON
+smb: \> prompt OFF
+smb: \> cd backup\
+smb: \backup\> ls
+  .                                   D        0  Sun Jun  5 11:04:14 2016
+  ..                                  D        0  Fri Jun  3 12:52:52 2016
+  vsftpd.conf                         N     5961  Sun Jun  5 11:03:45 2016
+  wordpress-4.tar.gz                  N  6321767  Mon Apr 27 13:14:46 2015
+
+                19478204 blocks of size 1024. 16397116 blocks available
+smb: \backup\> mget vsftpd.conf 
+getting file \backup\vsftpd.conf of size 5961 as vsftpd.conf (529.2 KiloBytes/sec) (average 529.2 KiloBytes/sec)
+smb: \backup\> mget wordpress-4.tar.gz 
+getting file \backup\wordpress-4.tar.gz of size 6321767 as wordpress-4.tar.gz (31023.1 KiloBytes/sec) (average 29425.8 KiloBytes/sec)
+```
+
+
+ 
