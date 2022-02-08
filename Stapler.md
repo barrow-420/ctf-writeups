@@ -166,3 +166,16 @@ TRACEROUTE
 HOP RTT     ADDRESS
 1   1.10 ms 192.168.35.52
 ```
+There were tons of information to be go through. 
+
+Ports opened were
+
+- 21(ftp), anonymous login allowed, vsFTPd 3.0.3 
+- 22(ssh)
+- 53(domain), dnsmasq 2.75, dnsmasq-2.75
+- 80(http)
+- 139(netbios-ssn), Samba, smbd
+- 666(tcpwrapped)
+- 3306(MySql)
+
+I decided to enumerate samba first.
