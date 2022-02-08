@@ -87,6 +87,8 @@ From dirb there are some pages that could be potentially bruteforced.
 - /phpmyadmin
 - /wordpress/wp-admin
 
+`/wordpress` showed that user name could be *togie .
+
 ## Nikto
 `nikto -h http://172.16.126.136`
 Result:
