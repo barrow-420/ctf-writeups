@@ -260,5 +260,41 @@ smb: \backup\> mget wordpress-4.tar.gz
 getting file \backup\wordpress-4.tar.gz of size 6321767 as wordpress-4.tar.gz (31023.1 KiloBytes/sec) (average 29425.8 KiloBytes/sec)
 ```
 
+## Checking out FTP
 
- 
+`ftp 192.168.35.57`
+
+```
+Connected to 192.168.35.57.
+220-
+220-|-----------------------------------------------------------------------------------------|
+220-| Harry, make sure to update the banner when you get a chance to show who has access here |
+220-|-----------------------------------------------------------------------------------------|
+220-
+220 
+Name (192.168.35.57:-----): anonymous
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+550 Permission denied.
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0             107 Jun 03  2016 note
+226 Directory send OK.
+ftp> mget note
+mget note [anpqy?]? 
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for note (107 bytes).
+100% |*******************************************************************|   107      314.73 KiB/s    00:00 ETA
+226 Transfer complete.
+107 bytes received in 00:00 (38.85 KiB/s)
+ftp> 
+```
+
+Note saying `Harry, make sure to update the banner when you get a chance to show who has access here` looks suspicious but I have no clue what it is. 
+
+note file said `Elly, make sure you update the payload information. Leave it in your FTP account once your are done, John.`
+
