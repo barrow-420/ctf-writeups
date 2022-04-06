@@ -54,4 +54,7 @@ smb: \> ls
                 5114111 blocks of size 4096. 1752789 blocks available
 ```
 
+`cd James.p`
+`get flag.txt`
 
+This was the basic CTF using smbclient command. 
