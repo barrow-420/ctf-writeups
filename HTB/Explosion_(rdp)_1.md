@@ -18,3 +18,8 @@ I tried bruteforcing with the Login: Explosion but it never worked, so I checked
 
 `xfreerdp /v:10.129.1.13 /u:Administrator`
 
+### RDP Exploitation
+Enumeration -> Bruteforce 
+
+If the Admin has set the Account lockout policy on Windows server, it would be almost impossible to bruteforce. 
+
