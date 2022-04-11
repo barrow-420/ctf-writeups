@@ -40,7 +40,7 @@ Reconnecting with SMB1 for workgroup listing.
 do_connect: Connection to 10.129.54.45 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
 Unable to connect with SMB1 -- no workgroup available
 ```
-Tried connecting to all the servers but every serves except for WorkShares requires credentials which I don't have. 
+Tried connecting to all the servers but every servers except for WorkShares requires credentials which I don't have. 
 
 `smbclient \\\\<ip>\\WorkShares`
 
